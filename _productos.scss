@@ -1,0 +1,241 @@
+main {
+    background-color: #e2a694;
+}
+
+.main-products {
+    margin-top: 77px;
+}
+
+.title-container{
+    background-color: $color-opacity;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    &__title {
+        width: fit-content; 
+        font-size: 15rem;
+
+        @include mobile-landscape-resolution{
+            font-size: 10rem;
+        }
+
+        @include mobile-portrait-resolution{
+            font-size: 5rem;
+        }
+    }
+}
+
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    justify-content: space-around;
+}  
+
+
+.product-card {
+    position: relative;
+}
+
+
+
+
+
+// .td-delete {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     text-align: center;
+//     background-color: $color-opacity;
+//     color: $color-white;
+//     padding: 5px;
+// }
+
+
+.number-amount {
+    width: 50px;
+    text-align: center;
+}
+
+.out-of-stock-banner-div {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: $color-opacity;
+    & p {
+        text-align: center;
+        color: #cf265e;
+        font-size: 2rem;
+        border-radius: 3px;
+    }
+}
+
+.display-hide {
+    display: none;
+}
+.display-show {
+    display: block;
+}
+
+.fa-circle-user {
+    border: solid 3px palevioletred;
+    border-color: #e2a694;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    background-color: #14141418;
+    width: 90%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 3rem auto 0;
+    padding: 30px 25px;
+    &__price-filter {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        & label{
+            margin-bottom: .2rem;
+        }
+        & input {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+    &__category-search-filter{
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__find-product-id {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        & input {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.category-checkbox-groups {
+    @include checkbox-style;
+    width:60%; 
+    padding: .5rem; 
+    & input {
+        background-color: white;
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.filters-container__price-filter > input[type=text], .filters-container__find-product-id > input[type=search] {
+    border: none;
+    border-radius: 1rem;
+}
+
+.id-search-error{
+    text-align: center;
+    padding: .5rem;
+    color: #cf265e;
+}
+
+.show-filters{
+    padding: 5rem 0 0 0;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    & button {
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+.alert-div{
+    background-color: #00000098;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-login-required {
+    color: #f5f1f1;
+    background-color: palevioletred;
+    position: fixed;
+    padding: 2rem;
+    border-radius: 1rem;
+    top: calc(50vh - 47px);
+    border: solid 3px rgb(212, 92, 132);
+    & p {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+    }
+}
+
+//////////////////////////////////
+
+.notification-div{
+    background-color: #00000000;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    & div {
+        color: #f5f1f1;
+        background-color: palevioletred;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 100px 40px 0 0;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: solid 3px rgb(212, 92, 132);
+        & p {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 0;
+        } 
+    }
+}
+
+.product-advise {
+
+    margin: .5rem 0 0 0;
+    font-weight: 700;
+    font-size: .8rem;
+    text-align: center;
+    color: #cf265e;
+}
+
+
+
+
+
+
+
+

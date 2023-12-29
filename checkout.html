@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Let It Be: Productos aromáticos y decorativos. Souvenirs para eventos y celebraciones. Venta mayorista y minorista"/>
+    <meta name="keywords" content="aromáticos, decoración, perfumería, velas, splash, difusores, jabón, souvenirs, decorativo, aromas, fragancias, productos, mayorista, minorista"/>
+    <meta name="author" content="Diego Martin Ruiz"/>
+    <meta name="copyright" content="Let It Be Shop"/>
+    <link rel="icon" type="image/png" href="../img/let-it-be-logo.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title> LET IT BE | Checkout </title>
+</head>
+<body>
+    <!-- HEADER -->
+  <header>
+    <!-- NAVIGATOR -->
+    <nav class="navbar navbar-expand-lg white navigator-bar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"> <img src="../img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-nav-link active" href="./cart.html" aria-current="page"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-counter d-none" id="cartCounter"></span></a>
+            </li>
+            <li class="nav-item">
+              <button class="navAccountButton"><i class="fa-solid fa-circle-user"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main class="payment-main">
+    <div class="progress-bar">
+      <div class="no-selected-block-div"> CARRITO <i class="fa-solid fa-cart-shopping"></i></div>
+      <span class="div-arrow"></span>
+      <div class="no-selected-block-div"> FORMAS DE PAGO </div>
+      <span class="div-arrow"></span>
+      <div class="selected-block-div"> PAGAR <i class="fa-regular fa-credit-card"></i></div>
+    </div>
+    <article class="payment-container-div">
+        <section class="payment-card-data-section">
+          <form action=""  class="card-form" id="cardForm">
+            <div class="card-group">
+              <label for="cardNumber"> Número de la tarjeta </label>
+              <input id="cardNumber" type="text" name="number" required>
+            </div>
+            <div class="card-group name-input">
+              <label for="cardName"> Nombre del titular </label>
+              <input id="cardName" type="text" maxlength="35" name="cardholder" required>
+              <i class="d-none fa-solid fa-circle-check"></i>
+            </div>
+            <div class="expirationDate-container card-group">
+              <label for="expireInput"> Fecha de expiración </label>
+              <div class="expiration-date-container">
+                <input id="expireMonth" type="text" maxlength="2" name="expirationMonth" placeholder="mm" required> 
+                <input id="expireYear" type="text" maxlength="2" name="expirationYear" placeholder="yy" required> 
+              </div>
+            </div>
+            <div class="card-group">
+              <label for="cvvInput">Número de seguridad </label>
+              <input id="cvvInput" type="text" maxlength="3"  placeholder="CVV" name="cvv" required>
+            </div>
+            <div class="payment-submit-container">
+              <button type="submit" id="paymentSubmitBtn" class="paymentSubmitBtn buy-btn"> PROCESAR PAGO <i class="fa-regular fa-credit-card"></i></button>
+            </div>
+          </form>
+        </section>
+        <section class="payment-card-example-section">
+          <div class="example-credit-card"> 
+            <p class="example-credit-card__bank" id="bankName"> BANK NAME </p>
+            <div class="example-credit-card__signature"><p id="cvvExample">CVV</p></div>
+            <img class="card-chip-img" src="../img/card-chip.png" alt="card chip">
+            <p class="card-number-example example-credit-card__number" id="cardNumberExample">0000 - 0000 - 0000 - 0000</p>
+            <div class="valid-thru-date example-credit-card__valid-container">
+                <h4 class="example-credit-card__valid-thru"> VALID THRU: </h4>
+                <div class="expire-data">
+                  <p class="example-credit-card__expire-date" id="expireMonthExample">00</p>
+                  <p class="example-credit-card__expire-date" id="expireYearExample">00</p>
+                </div> 
+            </div>
+            <p id="cardholderExample" class="example-credit-card__cardholder"> CARDHOLDER </p>
+          </div>
+        </section>
+      </article>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-container__text">Síguenos en redes...</p>
+      <ul class="footer-container__icons">
+        <li><a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+        <li><a href="./error404.html" target="_blank"><i class='bx bx-envelope'></i></a></li>
+        <li><a href="https://www.facebook.com/letitbeshop" target="_blank"><i class='bx bxl-facebook-square'></i></a></li>
+      </ul>
+      <p class="footer-container__copyright">© 2022 Let It Be</p>
+    </div>
+  </footer>
+  <!-- SCRIPT  -->
+  <script src="https://kit.fontawesome.com/44947348f6.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+  <script src="../js/checkout/checkout.js"></script>
+  <script src="../js/login/login.js"></script>
+</body>
+</html>
